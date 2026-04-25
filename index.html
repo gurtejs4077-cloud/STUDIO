@@ -1357,6 +1357,33 @@
             color: var(--mist);
         }
 
+        /* ─── TESTIMONIALS ─────────────────────────────── */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin-top: 40px;
+        }
+
+        @media(max-width:768px) {
+            .testimonials-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 16px;
+                padding-bottom: 20px;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+            }
+            .testimonials-grid::-webkit-scrollbar {
+                display: none;
+            }
+            .testimonials-grid > div {
+                min-width: 85vw;
+                scroll-snap-align: center;
+            }
+        }
+
         /* ─── PARALLAX STRIPS ─────────────────────────────── */
         .parallax-strip {
             height: 400px;
@@ -2183,7 +2210,7 @@
                 <div class="section-label reveal" style="text-align:center">Kind Words</div>
                 <div class="section-title reveal" style="text-align:center">What Our Clients <em>Say</em></div>
                 <div class="divider reveal" style="margin:28px auto"></div>
-                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px">
+                <div class="testimonials-grid">
                     <div class="reveal" style="background:var(--coal);padding:40px 36px;transition-delay:.0s">
                         <div
                             style="font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);line-height:.8;margin-bottom:20px">
