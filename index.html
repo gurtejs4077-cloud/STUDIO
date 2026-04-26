@@ -2053,6 +2053,23 @@
             max-width: 600px;
             padding: 0 20px;
         }
+        .creator-credit {
+            position: absolute;
+            bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.75rem;
+            color: var(--mist);
+            letter-spacing: 0.1em;
+        }
+        .creator-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+        }
     </style>
 </head>
 
@@ -2068,6 +2085,10 @@
         <h2>Welcome to Lumière Studio</h2>
         <p>Experience the art of light. Please turn up your volume for the full immersive experience.</p>
         <button class="btn-primary" id="explore-btn">Let's Explore</button>
+        <div class="creator-credit">
+            <img src="image.png" alt="Gurtej Singh" class="creator-img">
+            <span>This page is a sample page made by GURTEJ SINGH</span>
+        </div>
     </div>
 
     <!-- CURSOR -->
